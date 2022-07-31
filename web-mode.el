@@ -850,10 +850,10 @@ Must be used in conjunction with web-mode-enable-block-face."
         'syntax-table)
   "Text properties used for code regions/tokens and html nodes.")
 
-(defvar web-mode-start-tag-regexp "<\\([[:alpha:]][[:alnum:].:_-]*\\|>\\)"
+(defvar web-mode-start-tag-regexp "<\\([[:alpha:].:][[:alnum:].:_-]*\\|>\\)"
   "Regular expression for HTML/XML start tag.")
 
-(defvar web-mode-tag-regexp "</?\\([[:alpha:]][[:alnum:].:_-]*\\)"
+(defvar web-mode-tag-regexp "</?\\([[:alpha:].:][[:alnum:].:_-]*\\)"
   "Regular expression for HTML/XML tag.")
 
 (defvar web-mode-dom-regexp "<\\(/?>\\|/?[[:alpha:]][[:alnum:].:_-]*\\|!--\\|!\\[CDATA\\[\\|!doctype\\|!DOCTYPE\\|\?xml\\)")
@@ -1319,7 +1319,7 @@ Must be used in conjunction with web-mode-enable-block-face."
    '("ctemplate"        . "[$]?{[{~].")
    '("django"           . "{[#{%]\\|^#")
    '("dust"             . "{.")
-   '("elixir"           . "<[%.:]\\|</?[.:]")
+   '("elixir"           . "<%\\|</?[.:]")
    '("ejs"              . "<%")
    '("erb"              . "<%\\|^%.")
    '("expressionengine" . "{.")
